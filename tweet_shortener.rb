@@ -25,8 +25,8 @@ def word_substituter(tweet)
     else
       word
     end
-  end.join(' ')     #then convert tweet_as_array back to a string
-  return mapped_tweet      #return shortened tweet
+  end         #then convert tweet_as_array back to a string
+  return mapped_tweet.join(' ')       #return shortened tweet
 end
 
 
@@ -51,9 +51,9 @@ end
 
 
 def shortened_tweet_truncator(tweet)
-  subst_tweet = word_substituter("GUISEEEEE this is so fun! I'm tweeting 4 u guys & this tweet is SOOOO long it's gonna b way more than u would think twitter can handle, so shorten it up u know what I mean? I just can never tell how long 2 keep typing!")
+  subst_tweet = word_substituter(tweet) 
   if subst_tweet.length > 140
-    puts "#{subst_tweet[140]}..." 
+    return "#{subst_tweet[0..136]}..." 
   else
   subst_tweet
   end
